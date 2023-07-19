@@ -32,3 +32,5 @@ logs
 /package.json
 /package-lock.json
 /.prettierrc
+
+.env
