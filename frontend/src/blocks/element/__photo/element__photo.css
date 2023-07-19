@@ -1,0 +1,13 @@
+.element__photo {
+  margin: 0;
+  padding: 0;
+  width: 282px;
+  height: 282px;
+  border-radius: 10px 10px 0 0;
+  grid-area: photo;
+  background-color: #000;
+}
+
+.element__photo:hover {
+  cursor: pointer;
+}

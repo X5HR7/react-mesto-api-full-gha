@@ -1,0 +1,25 @@
+.profile {
+  margin: 0 auto 50px auto;
+  padding: 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, max-content) auto;
+  grid-template-areas: 
+  "avatar profile-info edit-btn add-btn";
+  gap: 0;
+}
+
+@media screen and (max-width: 650px) {
+  .profile {
+    max-width: max-content;
+    margin: 0 auto 36px auto;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas: 
+    "avatar avatar avatar"
+    ". profile-info edit-btn"
+    "add-btn add-btn add-btn";
+    gap: 0 10px;
+    justify-items: center;
+  }
+}

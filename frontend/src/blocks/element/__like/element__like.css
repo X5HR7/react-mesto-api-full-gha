@@ -1,0 +1,9 @@
+.element__like {
+    margin: auto 20px auto auto;
+    padding: 0;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    grid-area: like;
+}
