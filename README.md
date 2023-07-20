@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 51.250.79.106
 
-Frontend https://...
+Frontend https://mesto.project.adg.nomoredomains.xyz
 
-Backend https://...
+Backend https://api.mesto.project.adg.nomoredomains.xyz

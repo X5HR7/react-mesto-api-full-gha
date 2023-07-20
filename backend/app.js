@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -22,7 +23,14 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(cors());
+const validUrls = [
+  'http://localhost:3000',
+  'http://localhost:3002',
+  'http://mesto.project.adg.nomoredomains.xyz/',
+  'https://mesto.project.adg.nomoredomains.xyz/'
+];
+
+app.use(cors({ origin: validUrls }));
 app.use(requestLogger);
 
 app.use('/users', auth, require('./routes/users'));
