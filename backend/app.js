@@ -23,14 +23,24 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const validUrls = [
+const whitelist = [
   'http://localhost:3000',
   'http://localhost:3002',
-  'http://mesto.project.adg.nomoredomains.xyz/',
-  'https://mesto.project.adg.nomoredomains.xyz/'
+  'http://mesto.project.adg.nomoredomains.xyz',
+  'https://mesto.project.adg.nomoredomains.xyz'
 ];
 
-app.use(cors({ origin: validUrls }));
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+};
+
+app.use(cors(corsOptions));
 app.use(requestLogger);
 
 app.use('/users', auth, require('./routes/users'));
