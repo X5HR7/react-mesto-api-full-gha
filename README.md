@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 51.250.79.106
+IP 51.250.79.106
 
 Frontend https://mesto.project.adg.nomoredomains.xyz
 
